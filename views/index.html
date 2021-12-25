@@ -4,8 +4,12 @@
     <title>QueryWeb</title>
 </head>
 <body>
-    <h1>Hello my query web application!</h1>
+    <div ng-app="myApp" ng-controller="myCtrl"> 
+    <p>欢迎信息:</p>  
+    <h1>{{myWelcome}}</h1>   
+    </div>
 </body>
     <script src="jquery/jquery.js"></script>
-    <!-- <script src="javascripts/index.js"></script> -->
+    <script src="angular/angular.min.js"></script>
+    <script src="javascripts/index.js"></script>
 </html>
