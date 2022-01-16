@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
     <title>QueryWeb</title>
 </head>
 <body>
     <div ng-app="myApp" ng-controller="myCtrl"> 
-    <p>欢迎信息:</p>  
-    <h1>{{myWelcome}}</h1>   
+        <p>查询信息: <input type="text" ng-model="queryKey">
+            <button class="btn btn-success" ng-click="queryData()">查询</button>
+        </p>  
+        <table class="table table table-striped">
+            <tr>
+                <th>index</th>
+                <th>boardInfo</th>
+                <th>cpuInfo</th>
+            </tr>
+            <tr ng-repeat="x in resultArray">
+                <td>{{ $index + 1 }}</td>
+                <td>{{ x.boardInfo }}</td>
+                <td>{{ x.cpuInfo }}</td>
+            </tr>
+        </table>
     </div>
 </body>
     <script src="jquery/jquery.js"></script>
