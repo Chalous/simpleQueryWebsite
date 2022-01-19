@@ -7,7 +7,9 @@
 </head>
 <body>
     <div ng-app="myApp" ng-controller="myCtrl"> 
-        <p>查询信息: <input type="text" ng-model="queryKey">
+        <p>查询信息: <input type="text" ng-model="queryKey" ng-keypress="pressEnter($event)">
+        <!-- <p>查询信息: <input type="text" ng-model="queryKey" ng-keypress="queryData()" ng-keydown="key($event)">可通过传递$event给后台检查按键 -->
+        <!-- <p>查询信息: <input type="text" ng-model="queryKey" ng-keypress="queryData()">通过使用ng-keypress方法调用按钮方法可以实现类似快速匹配的效果，即只要查到相关结果就会打印 --> 
             <button class="btn btn-success" ng-click="queryData()">查询</button>
         </p>  
         <table class="table table table-striped">

@@ -9,4 +9,10 @@ app.controller('myCtrl', function($scope, $http) {
       $scope.resultArray = req.data;
     });
   }
+
+  $scope.pressEnter = function($event){
+    if ($event.keyCode == 13) {
+      $scope.queryData();
+    }
+  }
 });
